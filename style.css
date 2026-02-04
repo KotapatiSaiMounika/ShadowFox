@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --beige: #f6f1eb;
+  --navy: #162846;
+  --dark: #0f1c33;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--beige);
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.section-tag, .tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b08a5b;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 380px;
+  border-radius: 50%;
+  border: 8px solid white;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.primary {
+  background: var(--navy);
+  color: white;
+  border: none;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 60px;
+}
+
+.about h2 {
+  font-size: 52px;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: var(--navy);
+  margin-top: 20px;
+}
+
+.skills h2,
+.portfolio h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  padding:24px;
+}
+
+.project-img {
+  height: 180px;
+  background: linear-gradient(180deg, #3a4d68, #1c2d4a);
+}
+
+.project-card h3 {
+  font-size: 18px;          
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 14px;        
+  line-height: 1.6;
+  color: #3a4d68;
+  margin-bottom: 12px;
+}
+
+.project-card .tech {
+  font-size: 12px;          
+  letter-spacing: 0.5px;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.project-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #b08a5b;
+  border-bottom: 1px solid #b08a5b;
+}
+
+
+.primary-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;             
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: white;
+  color: var(--navy);
+}
+
+
+.secondary-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: 2px solid white;
+  color: white;              
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: var(--navy);
+}
+
+
+/* CONTACT */
+.contact {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+.contact .secondary {
+  border-color: white;
+  color: white;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1); 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
