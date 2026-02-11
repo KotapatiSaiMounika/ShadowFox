@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-  --beige: #f6f1eb;
+  --beige: #faf7f3;
   --navy: #162846;
   --dark: #0f1c33;
 }
@@ -26,7 +26,20 @@ h1, h2 {
 }
 
 section {
-  padding: 80px 10%;
+  padding: 70px 10%;
+  border-bottom: 1px solid rgba(22, 40, 70, 0.05);
+}
+
+.about {
+  background: white;
+}
+
+.skills {
+  background: #f3ece4;
+}
+
+.portfolio {
+  background: white;
 }
 
 .section-tag, .tag {
@@ -46,9 +59,11 @@ section {
 }
 
 .hero h1 {
-  font-size: 80px;
-  margin-bottom: 20px;
+  font-size: 90px;
+  letter-spacing: 2px;
+  line-height: 1.1;
 }
+
 
 .hero-image img {
   width: 380px;
@@ -87,6 +102,11 @@ button {
   gap: 60px;
 }
 
+.about-right {
+  max-width: 600px;
+}
+
+
 .about h2 {
   font-size: 52px;
 }
@@ -122,29 +142,31 @@ button {
   margin-bottom: 15px;
 }
 
+.card, .project-card {
+  box-shadow: 0 15px 35px rgba(22, 40, 70, 0.08);
+  background: #ffffff;
+}
+
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;            
+  margin-top: 50px;    
+  margin-bottom: 50px
 }
 
 .project-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  padding:24px;
+  padding: 24px 24px 28px;  
+  border-radius: 14px;
+  background: #ffffff;
 }
+
+
 
 .project-img {
-  height: 180px;
+  height: 140px;
+  border-radius: 12px;
   background: linear-gradient(180deg, #3a4d68, #1c2d4a);
-}
-
-.project-card h3 {
-  font-size: 18px;          
-  margin-top: 16px;
-  margin-bottom: 10px;
 }
 
 .project-card p {
@@ -261,5 +283,15 @@ footer {
 .social-links a:hover img {
   transform: scale(1.2);
   opacity: 0.8;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
