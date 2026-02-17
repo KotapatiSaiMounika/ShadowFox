@@ -7,7 +7,7 @@ Built using React + TypeScript + Vite with a sleek dark UI and interactive data 
 ---
 
 ## 🚀 Live Demo
-(Will add deployment link here)
+https://6994022a718d0cfcb9faa195--earnest-duckanoo-4395cd.netlify.app/
 
 ---
 
