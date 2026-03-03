@@ -1,0 +1,247 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 18px 100px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+   transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 10px rgba(143, 185, 204, 0.6));
+}
+
+.navbar.glass {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.nav-link:hover {
+  color: #7eb4cd;
+}
+
+/* Underline animation base */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: #8fb9cc;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Active link */
+.nav-link.active {
+  color: #8fb9cc;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.mobile-appointment {
+  margin-top: 10px;
+  padding: 14px;
+  background: linear-gradient(135deg, #8fb9cc, #79aeca);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(143,185,204,0.35);
+  transition: all 0.3s ease;
+}
+
+.mobile-appointment:hover {
+  transform: translateY(-2px);
+}
+
+.appointment-btn {
+  background: #8fb9cc;
+  color: #ffffff;
+  padding: 15px 32px;   
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(143,185,204,0.35);
+}
+
+.appointment-btn:hover {
+  background: #79aeca;
+  transform: translateY(-2px);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+/* Glass Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 1000;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* Smooth slide animation */
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+  font-size: 19px;
+  font-weight: 500;
+  color: #0a0e13;
+  text-decoration: none;
+  padding-bottom: 6px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+/* Active highlight inside sidebar */
+.sidebar .nav-link.active {
+  color: #8fb9cc;
+}
+
+.sidebar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: #8fb9cc;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Active link */
+.sidebar .nav-link.active {
+  color: #8fb9cc;
+  font-weight: 600;
+}
+
+.sidebar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Close button */
+.close {
+  align-self: flex-end;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.close {
+  font-size: 22px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .links,
+  .appointment-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding: 18px 30px;
+  }
+}

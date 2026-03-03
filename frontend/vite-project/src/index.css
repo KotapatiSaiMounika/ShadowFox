@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  padding: 80px 100px;
+}
+
+@media (max-width: 1024px) {
+  .hero,
+  .facilities {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-cards,
+  .service-grid,
+  .testimonial-grid,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 60px 30px;
+  }
+
+  .hero-right img,
+  .facilities-right img {
+    width: 100%;
+  }
+}

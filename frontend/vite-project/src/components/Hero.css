@@ -1,0 +1,136 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 100px;   /* reduced height */
+  background: #f8fafc;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #edf6fb;
+  color: #4b5563;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.hero-left {
+  max-width: 650px;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;   /* tighter spacing */
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+  color: #4b5563;  /* lighter tone for Women, Children & Families */
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  gap: 18px;
+  margin-top: 25px;
+}
+
+/* Primary Button */
+.primary-btn {
+  width: 100%;
+  background: #8fb9cc;
+  border: none;
+  padding: 18px 0;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.secondary-btn {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #d1d5db;
+  padding: 18px 0;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f2937;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #f9fafb;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+@media (min-width: 769px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: auto;
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  .hero-left h1 {
+    font-size: 40px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+    border-radius: 25px;
+  }
+}
