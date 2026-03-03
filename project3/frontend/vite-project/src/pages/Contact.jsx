@@ -24,7 +24,7 @@ const Contact = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+  "https://sakthi-backend.onrender.com/api/appointments",
         {
           method: "POST",
           headers: {
