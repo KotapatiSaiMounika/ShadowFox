@@ -1,0 +1,20 @@
+.about-cta {
+  padding: 100px 20px;
+  text-align: center;
+  background: #8fb9cc;
+  color: white;
+}
+
+.about-cta h2 {
+  margin-bottom: 20px;
+}
+
+.about-cta button {
+  background: white;
+  color: #8fb9cc;
+  padding: 15px 35px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
